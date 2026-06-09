@@ -1,4 +1,6 @@
-public class Hotel extends Servico{
+package Model;
+
+public class Hotel extends Servico {
 
     int dias;
 

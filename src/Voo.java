@@ -1,4 +1,6 @@
-public class Voo extends Servico{
+import Model.Servico;
+
+public class Voo extends Servico {
 
     String classe;
 

@@ -1,3 +1,5 @@
+package View;
+
 public class PacoteViagemView {
 
     public void printaInfo(String model_string){  

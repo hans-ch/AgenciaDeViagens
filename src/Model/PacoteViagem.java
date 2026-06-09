@@ -1,3 +1,5 @@
+package Model;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -23,7 +25,7 @@ public class PacoteViagem {
         double valor_total = 0.0;
 
         for(Servico item : itens){
-            valor_total += item.calcularPreco();}  //depende do nome da função em Servico
+            valor_total += item.calcularPreco();}  //depende do nome da função em Model.Servico
 
         return valor_total; 
     }

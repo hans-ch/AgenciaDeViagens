@@ -1,3 +1,7 @@
+import Model.Cliente;
+import Model.Hotel;
+import Model.PacoteViagem;
+
 public class Main {
     public static void main(String[] args) throws Exception {
 

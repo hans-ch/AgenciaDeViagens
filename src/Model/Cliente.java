@@ -1,3 +1,5 @@
+package Model;
+
 public class Cliente {
 
     private String id;
@@ -30,7 +32,7 @@ public class Cliente {
     @Override
     public String toString(){
 
-        return String.format("ID Cliente: %s \nNome: %s \nCPF: %s\n", id, nome, cpf);
+        return String.format("ID Model.Cliente: %s \nNome: %s \nCPF: %s\n", id, nome, cpf);
     }
 
 
