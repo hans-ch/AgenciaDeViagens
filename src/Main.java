@@ -1,6 +1,6 @@
-import Model.Cliente;
-import Model.Hotel;
-import Model.PacoteViagem;
+import Model.*;
+import View.*;
+
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -22,19 +22,14 @@ public class Main {
 
 //=============================================================================================
     // elementos abaixo são placeholders para Serviços, podem ignorar. Depois mudo de acordo
-        Voo serv = new Voo();  
-        Hotel hotel = new Hotel();
+        Voo avion = new Voo("324", "Curitiba/Cascavel", 100.00, 128, 60.00);  
+        Hospedagem hotel = new Hospedagem("333", "Érbi enbi", 150.00, 4, 13);
 
-        serv.preco = 100.00;
-        serv.classe = "executivo";
-
-        hotel.preco = 100.00;
-        hotel.dias = 366;
 //=============================================================================================
 
         PacoteViagem pacote = new PacoteViagem("67", pessoa);
 
-        pacote.adicionarItem(serv);
+        pacote.adicionarItem(avion);
         pacote.adicionarItem(hotel);
 
         System.out.println(pacote.toString());
