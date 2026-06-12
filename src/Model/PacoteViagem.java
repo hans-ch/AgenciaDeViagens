@@ -6,13 +6,13 @@ import java.util.ArrayList;
 public class PacoteViagem {
 
     private String id_pacote;
-    private Cliente obj_cliente;  
-    /*private ?*/ List<Servico> itens = new ArrayList<>();
+    private Cliente cliente;  
+    private List<Servico> itens = new ArrayList<>();
 
-    public PacoteViagem(String id_pacote, Cliente obj_cliente){
+    public PacoteViagem(String id_pacote, Cliente cliente){
 
         this.id_pacote = id_pacote;
-        this.obj_cliente = obj_cliente;
+        this.cliente = cliente;
     }
 
     public void adicionarItem(Servico s){
@@ -30,13 +30,14 @@ public class PacoteViagem {
         return valor_total; 
     }
 
-    @Override
-    public String toString(){
+    public String getIdPacote() {
+        return id_pacote;}
+    public void setIdPacote(String id_pacote) {
+        this.id_pacote = id_pacote;}
 
-        String info_cliente = obj_cliente.toString();  //vem do toString da classe cliente
-
-        return "ID do pacote: " + id_pacote + "\n" + info_cliente;
-    }
-
+    public Cliente getCliente() {
+        return cliente;}
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;}
 
 }

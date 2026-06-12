@@ -28,13 +28,4 @@ public class Cliente {
     public void setCPF(String cpf) {
         this.cpf = cpf;}
 
-
-    @Override
-    public String toString(){
-
-        return String.format("ID Model.Cliente: %s \nNome: %s \nCPF: %s\n", id, nome, cpf);
-    }
-
-
-
 }
