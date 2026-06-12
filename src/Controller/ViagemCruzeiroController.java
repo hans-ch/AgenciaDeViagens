@@ -14,6 +14,10 @@ public class ViagemCruzeiroController {
     }
 
     public void cadastrar(ViagemCruzeiro viagemCruzeiro) {
+        if(viagemCruzeiro == null) {
+            throw new IllegalArgumentException("A viagem de cruzeiro não pode ser nula");
+        }
+
         if (buscarPorId(viagemCruzeiro.getId()) != null) {
             throw new IllegalStateException("Ja existe uma viagem de cruzeiro cadastrada com este ID.");
         }

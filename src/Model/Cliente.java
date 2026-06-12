@@ -15,6 +15,7 @@ public class Cliente {
 
     public String getID() {
         return id;}
+
     public void setID(String id) {
         this.id = id;}
 

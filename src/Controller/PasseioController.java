@@ -1,6 +1,8 @@
 package Controller;
 
 import Model.Passeio;
+import utils.LoggerService;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,10 +15,15 @@ public class PasseioController {
     }
 
     public void cadastrar(Passeio passeio) {
+        if (passeio == null){
+            throw new IllegalArgumentException("Passeio não pode ser nulo");
+        }
+
         if (buscarPorId(passeio.getId()) != null) {
             throw new IllegalStateException("Já existe um passeio cadastrado com este ID.");
         }
         this.listaPasseios.add(passeio);
+        LoggerService.registrarInfo("Passeio cadastrado com sucesso: " + passeio.getNome() + " (ID: " + passeio.getId() + ")");
     }
 
     public List<Passeio> listar() {

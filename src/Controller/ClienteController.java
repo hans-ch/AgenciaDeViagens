@@ -1,8 +1,10 @@
 package Controller;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Objects;
 
 import Model.Cliente;
+import utils.LoggerService;
 
 public class ClienteController {
 
@@ -10,6 +12,7 @@ public class ClienteController {
 
     public void cadastrar(Cliente c) {
         listaClientes.add(c);
+        LoggerService.registrarInfo("Cliente cadastrado com sucesso: " + c.getNome() + " (ID: " + c.getID() + ")");
     }
 
     public List<Cliente> listar(){
@@ -19,7 +22,7 @@ public class ClienteController {
     public Cliente buscarPorId(String id){
 
         for(Cliente cliente : listaClientes){
-            if(cliente.getID() == id){
+            if(Objects.equals(cliente.getID(), id)){
                 
                 return cliente;
             }
@@ -47,7 +50,7 @@ public class ClienteController {
 
     public boolean deletar(String id){
         for(Cliente cliente : listaClientes){
-            if(cliente.getID() == id){
+            if(Objects.equals(cliente.getID(), id)){
                 
                 listaClientes.remove(cliente);
                 System.out.println("Deletado com sucesso");

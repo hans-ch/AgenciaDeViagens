@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.ViagemOnibus;
+import utils.LoggerService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,11 +19,12 @@ public class ViagemOnibusController {
             throw new IllegalArgumentException("O id da viagem não pode ser nula");
         }
 
-        if (buscarPorId(viagem.getId()) != null) {
+        if (buscarPorId(viagemOnibus.getId()) != null) {
             throw new IllegalStateException("Ja existe uma viagem cadastrada com este ID.");
         }
 
-        this.listaOnibus.add(viagem);
+        this.listaOnibus.add(viagemOnibus);
+        LoggerService.registrarInfo("Viagem de onibus cadastrada com sucesso: " + viagemOnibus.getNome() + " (ID: " + viagemOnibus.getId() + ")");
     }
 
     public List<ViagemOnibus> listar() {

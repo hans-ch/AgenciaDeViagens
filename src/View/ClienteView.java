@@ -70,7 +70,7 @@ public class ClienteView {
                     break;
 
                 case 5:
-                    System.out.println("Informe o ID do cliente a atualizar: ");
+                    System.out.println("Informe o ID do cliente a ser deletado: ");
                     String pesquisa3 = scanner.nextLine();    
 
                     controller.deletar(pesquisa3);

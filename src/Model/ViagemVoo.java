@@ -2,11 +2,11 @@ package Model;
 //Favor criar a classe "SERVICO"
 
 
-public class Voo extends Servico {
+public class ViagemVoo extends Transporte {
     private double taxaEmbarque;
 
-    public Voo(String id, String nome, double precoBase, int vagas, double taxaEmbarque) {
-        super(id, nome, precoBase, vagas);
+    public ViagemVoo(String id, String nome, double precoBase, int vagas, String localOrigem, String localDestino, String companhia, String horarioEmbarque, double taxaEmbarque) {
+        super(id, nome, precoBase, vagas, localOrigem, localDestino, companhia, horarioEmbarque);
         this.taxaEmbarque = taxaEmbarque;
     }
 
