@@ -14,32 +14,29 @@ public class PacoteViagemController {
         listaPacotes.add(p);
     }
 
-
-    public List<PacoteViagem> listar(){
+    public List<PacoteViagem> listar() {
         return listaPacotes;
     }
 
-
     public double aplicarDesconto(PacoteViagem p){
-
-        double valorDesconto = (p.calcularTotal()) * 0.85;
-        return valorDesconto;
+        return p.calcularTotal() * 0.85;
     }
 
     public double aplicarDesconto(PacoteViagem p, String cupom){
         double valorDesconto = p.calcularTotal();
 
         switch(cupom){
-            case "cupom panfleto": valorDesconto *= 0.90;
+            case "cupom panfleto": valorDesconto -= 50.00;
             break;
 
-            case "cupom sorteado": valorDesconto *= 0.75;
+            case "cupom sorteado": valorDesconto -= 150.00;
             break;
 
-            case "cupom premiado": valorDesconto *= 0.50;
+            case "cupom premiado": valorDesconto -= 300.00;
             break;
         }
 
         return valorDesconto;
     }
+
 }

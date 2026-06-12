@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.ArrayList;
+
 import Controller.*;
 import Model.*;
 import View.*;
@@ -7,6 +10,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         Cliente pessoa = new Cliente("1234", "Gimini Billy Bob", "93784683300");
+
         
         ClienteView view = new ClienteView();
         ClienteController controller = new ClienteController(pessoa, view);
@@ -23,8 +27,8 @@ public class Main {
 
 //=============================================================================================
     // elementos abaixo são placeholders para Serviços, podem ignorar. Depois mudo de acordo
-        Voo avion = new Voo("324", "Curitiba/Cascavel", 100.00, 128, 60.00);  
-        Hospedagem hotel = new Hospedagem("333", "Érbi enbi", 150.00, 4, 13);
+        ViagemVoo avion = new ViagemVoo("324", "Curitiba/Cascavel", 100.00, 128, 60.00);  
+        HospedagemController hotel = new HospedagemController("333", "Érbi enbi", 150.00, 4, 13);
 
 //=============================================================================================
 
@@ -35,5 +39,7 @@ public class Main {
 
         System.out.println(pacote.toString());
         System.out.println("Valor total: R$" + pacote.calcularTotal());
+
+        
     }
 }

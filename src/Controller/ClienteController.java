@@ -12,8 +12,8 @@ public class ClienteController {
         listaClientes.add(c);
     }
 
-    public List<Cliente> listar(){
-        return listaClientes;  // ?????
+    public List<Cliente> listar() {
+        return listaClientes;  
     }
 
     public Cliente buscarPorId(String id){
@@ -24,8 +24,7 @@ public class ClienteController {
                 return cliente;
             }
         }
-        System.out.println("ID não encontrado");
-
+        
         return null;
     }
 
@@ -35,12 +34,9 @@ public class ClienteController {
                 
                 int indice = listaClientes.indexOf(cliente);
                 listaClientes.set(indice, novo);
-                System.out.println("Atualizado com sucesso");
                 return true;
             }
         }
-
-        System.out.println("ID não encontrado");
         return false;
     }
 
@@ -50,12 +46,10 @@ public class ClienteController {
             if(cliente.getID() == id){
                 
                 listaClientes.remove(cliente);
-                System.out.println("Deletado com sucesso");
                 return true;
             }
         }
 
-        System.out.println("ID não encontrado");
         return false;
     }
 

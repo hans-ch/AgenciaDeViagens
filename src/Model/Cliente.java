@@ -1,5 +1,7 @@
 package Model;
 
+import static java.lang.String.format;
+
 public class Cliente {
 
     private String id;
@@ -27,5 +29,9 @@ public class Cliente {
         return cpf;}
     public void setCPF(String cpf) {
         this.cpf = cpf;}
+
+    public String toString(){
+        return format("ID: %s \nNome: %s \nCPF: %s\n", id, nome, cpf);
+    }
 
 }

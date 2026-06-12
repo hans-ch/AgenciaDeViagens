@@ -7,17 +7,17 @@ public class PacoteViagem {
 
     private String id_pacote;
     private Cliente cliente;  
-    private List<Servico> itens = new ArrayList<>();
+    private List<Servico> itens; // = new ArrayList<>();
 
     public PacoteViagem(String id_pacote, Cliente cliente){
 
         this.id_pacote = id_pacote;
         this.cliente = cliente;
+        this.itens = new ArrayList<>();
     }
 
     public void adicionarItem(Servico s){
         itens.add(s);
-
     }
 
     public double calcularTotal(){
