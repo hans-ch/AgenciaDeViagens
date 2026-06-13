@@ -36,8 +36,14 @@ public class PacoteViagem {
         this.id_pacote = id_pacote;}
 
     public Cliente getCliente() {
-        return cliente;}
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;}
+        return cliente;
+    }
 
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public List<Servico> getItens() {
+        return itens;
+    }
 }

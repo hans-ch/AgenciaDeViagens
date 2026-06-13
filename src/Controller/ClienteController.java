@@ -47,7 +47,8 @@ public class ClienteController {
     public boolean deletar(String id){
         for(Cliente cliente : listaClientes){
             if(Objects.equals(cliente.getID(), id)){
-                
+
+                LoggerService.registrarInfo("Cliente removido com sucesso: " + cliente.getNome() + " (ID: " + cliente.getID() + ")");
                 listaClientes.remove(cliente);
                 return true;
             }

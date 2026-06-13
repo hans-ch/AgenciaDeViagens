@@ -15,6 +15,7 @@ public class HospedagemController {
     }
 
     public void cadastrar(Hospedagem hospedagem) {
+        //Valida se hospedagem não é nula
         if (hospedagem == null) {
             throw new IllegalArgumentException("A hospedagem nao pode ser nula.");
         }
@@ -26,7 +27,6 @@ public class HospedagemController {
 
         this.listaHospedagens.add(hospedagem);
 
-        // Uso do LoggerService para registrar o sucesso da operacao no arquivo de texto
         LoggerService.registrarInfo("Hospedagem cadastrada com sucesso: " + hospedagem.getNome() + " (ID: " + hospedagem.getId() + ")");
     }
 

@@ -34,7 +34,7 @@ public class MenuPrincipalView {
         // Instanciando Views e passando seus respectivos controllers
         this.clienteView = new ClienteView(clienteCtrl);
         this.hospedagemView = new HospedagemView(hospCtrl);
-        this.pacoteViagemView = new PacoteViagemView(pacoCtrl, clienteCtrl, hospCtrl, passeioCtrl, vooCtrl, tremCtrl, cruzeiroCtrl);
+        this.pacoteViagemView = new PacoteViagemView(pacoCtrl, clienteCtrl, hospCtrl, passeioCtrl, vooCtrl, tremCtrl, cruzeiroCtrl, onibusCtrl);
         this.passeioView = new PasseioView(passeioCtrl);
         this.cruzeiroView = new ViagemCruzeiroView(cruzeiroCtrl);
         this.onibusView = new ViagemOnibusView(onibusCtrl);
@@ -53,6 +53,7 @@ public class MenuPrincipalView {
             System.out.println("5. Gestão de Trens");
             System.out.println("6. Gestão de Voos");
             System.out.println("7. Gestão de Hospedagens");
+            System.out.println("8. Gestão de Pacote de Viagem");
             System.out.println("0. Sair do Sistema");
             System.out.print("Escolha um módulo: ");
 
@@ -83,6 +84,9 @@ public class MenuPrincipalView {
                     break;
                 case 7:
                     hospedagemView.exibirSubMenu();
+                    break;
+                case 8:
+                    pacoteViagemView.exibirSubMenu();
                     break;
                 case 0:
                     System.out.println("Encerrando o sistema. Até logo!");

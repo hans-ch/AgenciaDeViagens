@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.ViagemCruzeiro;
+import utils.LoggerService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,7 @@ public class ViagemCruzeiroController {
             throw new IllegalStateException("Ja existe uma viagem de cruzeiro cadastrada com este ID.");
         }
 
+        LoggerService.registrarInfo("Viagem de cruzeiro cadastrado com sucesso: " + viagemCruzeiro.getNome() + " (ID: " + viagemCruzeiro.getId() + ")");
         this.listaCruzeiros.add(viagemCruzeiro);
     }
 
