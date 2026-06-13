@@ -106,6 +106,7 @@ public class ClienteView {
 
         controller.cadastrar(novoCliente);
         System.out.println("Cliente cadastrado");
+
     } 
 
     public void exibirClientes(){

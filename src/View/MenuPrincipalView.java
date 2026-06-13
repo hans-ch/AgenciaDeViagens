@@ -10,7 +10,7 @@ public class MenuPrincipalView {
     // Declarando as Views
     private final ClienteView clienteView;
     private final HospedagemView hospedagemView;
-    //private final PacoteViagemView pacoteViagemView;
+    private final PacoteViagemView pacoteViagemView;
     private final PasseioView passeioView;
     private final ViagemCruzeiroView cruzeiroView;
     private final ViagemOnibusView onibusView;
@@ -24,7 +24,7 @@ public class MenuPrincipalView {
         // Instanciando Controllers
         ClienteController clienteCtrl = new ClienteController();
         HospedagemController hospCtrl = new HospedagemController();
-        //PacoteViagemController pacoCtrl = new PacoteViagemController();
+        PacoteViagemController pacoCtrl = new PacoteViagemController();
         PasseioController passeioCtrl = new PasseioController();
         ViagemCruzeiroController cruzeiroCtrl = new ViagemCruzeiroController();
         ViagemOnibusController onibusCtrl = new ViagemOnibusController();
@@ -34,7 +34,7 @@ public class MenuPrincipalView {
         // Instanciando Views e passando seus respectivos controllers
         this.clienteView = new ClienteView(clienteCtrl);
         this.hospedagemView = new HospedagemView(hospCtrl);
-        //this.pacoteViagemView = new PacoteViagemView(pacoCtrl);
+        this.pacoteViagemView = new PacoteViagemView(pacoCtrl, clienteCtrl, hospCtrl, passeioCtrl, vooCtrl, tremCtrl, cruzeiroCtrl);
         this.passeioView = new PasseioView(passeioCtrl);
         this.cruzeiroView = new ViagemCruzeiroView(cruzeiroCtrl);
         this.onibusView = new ViagemOnibusView(onibusCtrl);

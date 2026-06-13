@@ -26,8 +26,6 @@ public class ViagemVooController {
         }
 
         this.listaVoos.add(voo);
-
-        // Registra o sucesso do cadastro no log do sistema
         LoggerService.registrarInfo("Voo cadastrado com sucesso: " + voo.getNome() + " (ID: " + voo.getId() + ")");
     }
 

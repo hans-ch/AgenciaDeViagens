@@ -33,7 +33,7 @@ public class ClienteController {
 
     public boolean atualizar(String id, Cliente novo){
         for(Cliente cliente : listaClientes){
-            if(cliente.getID() == id){
+            if(Objects.equals(cliente.getID(), id)){
                 
                 int indice = listaClientes.indexOf(cliente);
                 listaClientes.set(indice, novo);
